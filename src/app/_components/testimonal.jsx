@@ -56,16 +56,16 @@ const Testimonial = () => {
           <button className="bg-gray-300 text-gray-600 rounded p-3 hover:bg-gray-400">
             <i className="fas fa-chevron-left"></i>
           </button>
-          <button className="bg-purple-600 text-white rounded p-3 hover:bg-purple-700">
+          <button className="bg-primary-main text-white rounded p-3 hover:bg-purple-700">
             <i className="fas fa-chevron-right"></i>
           </button>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="bg-purple-200 py-6 w-full text-center">
-        <p className="text-lg font-semibold mb-4">Are you the next happy customer?</p>
-        <button className="bg-purple-600 text-white py-2 px-6 rounded-lg hover:bg-purple-700">
+      <section className="bg-purple-200 p-6 w-full text-center flex justify-between rounded items-center">
+        <p className="text-lg font-semibold text-white">Are you the next happy customer?</p>
+        <button className="bg-primary-main text-white  rounded-lg hover:bg-purple-700 px-10 py-2">
           Get Offers
         </button>
       </section>

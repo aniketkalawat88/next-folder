@@ -5,6 +5,8 @@ import Packages from "./_components/packages";
 import Tours from "./_components/tours";
 import AboutUs from "./_components/aboutUs";
 import Testimonal from "./_components/testimonal";
+import Contact from "./_components/contact";
+import Blogs from "./_components/blogs";
 
 export default function Home() {
   return (
@@ -22,6 +24,8 @@ export default function Home() {
       <Tours />
       <AboutUs />
       <Testimonal />
+      <Contact />
+      <Blogs />
     </div>
   );
 }

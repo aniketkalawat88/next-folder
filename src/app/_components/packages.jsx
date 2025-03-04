@@ -53,17 +53,16 @@ const packagesData = [
 
 const Packages = () => {
   return (
-    <div className="max-w-7xl mx-auto py-8 px-4 md:px-6">
-    <h1 className="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8">
-      Our Popular Tour Packages
-    </h1>
-
+    <div className="max-w-6xl mx-auto py-8 px-4 md:px-6">
+    <h1 className="text-[2.5rem] font-bold text-[#1E1E1E] leading-[130%] font-montserrat text-center mb-8">
+    Our Popular Tour Packages
+      </h1>
     {/* Navigation Buttons */}
     <div className="flex justify-center md:justify-end mb-4 space-x-2">
-      <button className="bg-gray-200 p-2 rounded-full">
+      <button className="bg-gray-200 p-2 rounded">
         <i className="fas fa-chevron-left text-gray-600"></i>
       </button>
-      <button className="bg-purple-600 p-2 rounded-full">
+      <button className="bg-purple-600 p-2 rounded">
         <i className="fas fa-chevron-right text-white"></i>
       </button>
     </div>
@@ -71,69 +70,80 @@ const Packages = () => {
     {/* Package Cards */}
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {packagesData.map((pkg) => (
-        <div
-          key={pkg.id}
-          className="bg-white rounded-lg shadow-lg overflow-hidden transition-all transform hover:scale-105"
-        >
-          {/* Image Section */}
-          <div className="relative">
-            <img src={pkg.image} alt={pkg.title} className="w-full h-52 sm:h-56 object-cover" />
-            <div className="absolute top-44 sm:top-48 flex justify-between w-full px-2">
-              <span className="bg-black text-white text-xs font-bold px-2 py-1 rounded">
-                {pkg.duration}
-              </span>
-              <span className="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
-                {pkg.discount}
-              </span>
-            </div>
-          </div>
-
-          {/* Package Details */}
-          <div className="p-4">
-            <h2 className="text-lg md:text-xl font-bold mb-2">{pkg.title}</h2>
-
-            {/* Rating */}
-            <div className="flex items-center mb-2">
-              {[...Array(5)].map((_, index) => (
-                <i
-                  key={index}
-                  className={`fas fa-star ${
-                    index < pkg.rating ? "text-yellow-500" : "text-gray-300"
-                  }`}
-                ></i>
-              ))}
-            </div>
-
-            {/* Highlights */}
-            <ul className="text-sm text-gray-700 mb-2">
-              {pkg.highlights.map((highlight, index) => (
-                <li key={index}>• {highlight}</li>
-              ))}
-            </ul>
-
-            {/* Pricing & Button Section */}
-            <div className="flex flex-row justify-between items-center">
-              <div>
-                <div className="text-lg font-bold text-green-600">{pkg.price}</div>
-                <div className="text-xl sm:text-2xl text-green-600 mb-1">({pkg.inrPrice})</div>
-                <div className="text-xs text-gray-500">Total package cost</div>
-              </div>
-              <button className="bg-purple-600 text-white text-sm font-bold px-4 py-2 rounded flex items-center mt-3 sm:mt-0">
-                <i className="fas fa-book mr-2"></i> View Tour
-              </button>
-            </div>
-
-            {/* Contact Buttons */}
-            <div className="grid grid-cols-4 gap-4 mt-3">
-              <button className="border border-purple-600 text-purple-600 text-sm font-bold px-4 py-2 rounded flex items-center justify-center w-full">
-                <i className="fab fa-whatsapp text-2xl"></i>
-              </button>
-              <button className="col-span-3 text-center border border-purple-600 text-purple-600 text-sm font-bold px-4 py-2 rounded flex items-center justify-center w-full">
-                Request Callback
-              </button>
-            </div>
-          </div>
-        </div>
+       <div
+       key={pkg.id}
+       className="bg-white rounded-lg shadow-lg overflow-hidden transition-all transform hover:scale-105"
+     >
+       {/* Image Section */}
+       <div className="relative">
+         <img src={pkg.image} alt={pkg.title} className="w-full h-52 sm:h-56 object-cover" />
+         <div className="absolute top-44 sm:top-48 flex justify-between w-full px-2">
+           <span className="bg-black text-white text-xs font-bold px-2 py-1 rounded">
+             {pkg.duration}
+           </span>
+           <span className="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
+             {pkg.discount}
+           </span>
+         </div>
+       </div>
+     
+       {/* Package Details */}
+       <div className="p-4">
+         {/* ✅ Package Title - Updated to Figma Spec */}
+         <h2 className="text-[18px] font-semibold text-[#1E1E1E] leading-[130%] font-montserrat mb-2">
+           {pkg.title}
+         </h2>
+     
+         {/* ⭐ Rating */}
+         <div className="flex items-center mb-2">
+           {[...Array(5)].map((_, index) => (
+             <i
+               key={index}
+               className={`fas fa-star ${
+                 index < pkg.rating ? "text-yellow-500" : "text-gray-300"
+               }`}
+             ></i>
+           ))}
+         </div>
+     
+         {/* 📌 Highlights - Updated to Figma Spec */}
+         <ul className="text-[16px] font-normal text-[#301C7B] leading-[150%] font-montserrat mb-2">
+           {pkg.highlights.map((highlight, index) => (
+             <li key={index}>• {highlight}</li>
+           ))}
+         </ul>
+     
+         {/* 💰 Pricing & Button Section */}
+         <div className="flex flex-row justify-between items-center">
+           <div>
+             <div className="text-[24px] font-semibold text-[#27AE60] leading-[130%] font-montserrat">
+               {pkg.price}
+             </div>
+             <div className="text-[24px] font-semibold text-[#27AE60] leading-[130%] font-montserrat">
+               ({pkg.inrPrice})
+             </div>
+             <div className="text-[12px] font-normal text-[#1E1E1E] leading-[130%] font-montserrat">
+               Total package cost
+             </div>
+           </div>
+           {/* 📍 View Tour Button */}
+           <button className="bg-[#301C7B] text-white text-[18px] font-medium px-4 py-2 rounded-lg font-montserrat leading-[130%] flex items-center mt-3 sm:mt-0">
+             <i className="fas fa-book mr-2"></i> View Tour
+           </button>
+         </div>
+     
+         {/* 📞 Contact Buttons */}
+         <div className="grid grid-cols-4 gap-4 mt-3">
+           <button className="border border-[#301C7B] text-[#301C7B] text-sm font-bold px-4 py-2 rounded flex items-center justify-center w-full">
+             <i className="fab fa-whatsapp text-2xl"></i>
+           </button>
+           <button className="col-span-3 text-center border border-[#301C7B] text-[#301C7B] text-sm font-bold px-4 py-2 rounded flex items-center justify-center w-full">
+             Request Callback
+           </button>
+         </div>
+       </div>
+     </div>
+     
       ))}
     </div>
   </div>

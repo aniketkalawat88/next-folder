@@ -2,13 +2,13 @@ import React from 'react'
 
 const AboutUs = () => {
   return (
-    <div className="max-w-7xl mx-auto p-14 overflow-hidden bg-white rounded-lg shadow-lg my-10 relative">
+    <div className="max-w-6xl mx-auto p-14 overflow-hidden bg-white rounded-lg shadow-lg my-10 relative">
         <div className="grid grid-cols-2 items-center justify-center">
             <div className="relative">
-                <div className=' h-[40rem] w-56 mx-auto bg-purple-800/50 absolute left-1/4 -top-28 rotate-12' />
+            <div className=' h-[100rem] w-56 mx-auto bg-purple-800/50 absolute left-24 -top-28 rotate-12' />
             <img
                 alt="Dubai Frame with a clear blue sky in the background"
-                className="rounded-lg z-10 w-full mx-auto h-[26rem] relative"
+                className="rounded-lg z-10 w-full mx-auto h-[35rem] relative"
                 src="https://storage.googleapis.com/a1aa/image/vb_bZYRvgplqS-l4Lh4E8A3wqNT0fhiCxznL6a49AXM.jpg"
             />
             </div>
@@ -24,27 +24,27 @@ const AboutUs = () => {
             <h3 className="text-xl font-bold text-gray-800 mt-6">Why Choose Us?</h3>
             <ul className="list-disc list-inside text-gray-600 mt-4 space-y-2">
                 <li>
-                <a className="text-purple-600 font-medium" href="#">
+                <span className="text-purple-600 font-medium">
                     Handpicked Experiences
-                </a>{" "}
+                </span>{" "}
                 – From iconic landmarks to hidden gems
                 </li>
                 <li>
-                <a className="text-purple-600 font-medium" href="#">
+                <span className="text-purple-600 font-medium">
                     Seamless Travel Planning
-                </a>{" "}
+                </span>{" "}
                 – We handle the details, so you don’t have to
                 </li>
                 <li>
-                <a className="text-purple-600 font-medium" href="#">
+                <span className="text-purple-600 font-medium">
                     Trusted by Travelers
-                </a>{" "}
+                </span>{" "}
                 – 10+ years of expertise in curated tours
                 </li>
                 <li>
-                <a className="text-purple-600 font-medium" href="#">
+                <span className="text-purple-600 font-medium">
                     Exclusive Deals &amp; Packages
-                </a>{" "}
+                </span>{" "}
                 – Best prices for unforgettable memories
                 </li>
             </ul>

@@ -33,45 +33,67 @@ const tourData = [
 
 const Tours = () => {
   return (
-    <div className="bg-white">
-    <div className="max-w-7xl mx-auto px-4 py-8 relative">
-      <h1 className="text-2xl md:text-3xl font-bold text-center mb-8">Our Tours</h1>
-      <div className="flex justify-end absolute top-10 right-0 mb-8">
-        <button className="bg-gray-300 text-gray-700 rounded p-2 mx-2">
-          <i className="fas fa-chevron-left"></i>
-        </button>
-        <button className="bg-purple-600 text-white rounded p-2 mx-2">
-          <i className="fas fa-chevron-right"></i>
-        </button>
-      </div>
-      
-      {/* Tour Cards */}
+  <div className="bg-white">
+    <div className="max-w-6xl mx-auto px-4 py-8 relative">
+      {/* ✅ Section Title (Updated to match Figma Spec) */}
+      <h1 className="text-[2.5rem] font-bold text-[#1E1E1E] leading-[130%] font-montserrat text-center mb-8">
+        Our Tours
+      </h1>
+  
+      {/* ✅ Navigation Buttons */}
+      <div className="flex justify-center md:justify-end mb-4 space-x-2">
+      <button className="bg-gray-200 p-2 rounded">
+        <i className="fas fa-chevron-left text-gray-600"></i>
+      </button>
+      <button className="bg-purple-600 p-2 rounded">
+        <i className="fas fa-chevron-right text-white"></i>
+      </button>
+    </div>
+  
+      {/* ✅ Tour Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {tourData.map((tour) => (
-          <div key={tour.id} className="bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
-            <img src={tour.image} alt={tour.alt} className="w-full h-48 object-cover" />
+          <div
+            key={tour.id}
+            className="bg-white shadow-lg rounded-lg overflow-hidden transform transition hover:scale-[1.05]"
+          >
+            {/* ✅ Tour Image */}
+            <img
+              src={tour.image}
+              alt={tour.alt}
+              className="w-full h-48 object-cover"
+            />
+  
+            {/* ✅ Tour Details */}
             <div className="p-4">
-              <h2 className="text-lg font-semibold mb-2">{tour.title}</h2>
-              <p className="text-sm text-gray-500 mb-2">Starting from only</p>
-              <p className="text-green-600 text-xl font-bold mb-4">{tour.price}</p>
+              <h2 className="text-[18px] font-semibold text-[#1E1E1E] leading-[130%] font-montserrat mb-2">
+                {tour.title}
+              </h2>
+              <p className="text-[14px] font-normal text-gray-500 leading-[150%] mb-2">
+                Starting from only
+              </p>
+              <p className="text-xl font-semibold text-[#27AE60] leading-[130%] font-montserrat mb-4">
+                {tour.price}
+              </p>
+  
+              {/* ✅ Contact Buttons */}
               <div className="grid grid-cols-4 gap-4 mt-3">
-              <button className="border border-purple-600 text-purple-600 text-sm font-bold px-4 py-2 rounded flex items-center justify-center w-full">
-                <i className="fab fa-whatsapp text-2xl"></i>
-              </button>
-              <button className="col-span-3 text-center border border-purple-600 text-purple-600 text-sm font-bold px-4 py-2 rounded flex items-center justify-center w-full">
-                Get Offers
-              </button>
-            </div>
+                {/* WhatsApp Button */}
+                <button className="border border-[#301C7B] text-[#301C7B] text-sm font-bold px-4 py-2 rounded flex items-center justify-center w-full hover:bg-[#301C7B] hover:text-white transition">
+                  <i className="fab fa-whatsapp text-2xl"></i>
+                </button>
+                {/* Get Offers Button */}
+                <button className="col-span-3 text-center border border-[#301C7B] text-[#301C7B] text-sm font-bold px-4 py-2 rounded flex items-center justify-center w-full hover:bg-[#301C7B] hover:text-white transition">
+                  Get Offers
+                </button>
+              </div>
             </div>
           </div>
         ))}
       </div>
-
-      {/* Navigation Buttons */}
-    
     </div>
-
-    </div>
+  </div>
+  
   );
 };
 
